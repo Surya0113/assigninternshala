@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Images Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            max-width: 200px;
+            margin: 20px;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Images Gallery</h1>
+
+    <div class="gallery" id="imageGallery"></div>
+
+    <script>
+       
+        const imageArray = [
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://static.freepsdfiles.net/uploads/2017/01/web-elements-set_1057-409.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.OvhCaEDiECuiV_ltls6XjgHaFB&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+            { "image": "https://image.freepik.com/free-vector/modern-web-element-collection_23-2147542483.jpg" },
+            { "image": "https://tse2.mm.bing.net/th?id=OIP.cOs1hEBVf_NrBmok8G44FQHaHa&pid=Api&P=0&h=220.jpg" },
+           
+        ];
+
+        function loadImages() {
+            const gallery = document.getElementById("imageGallery");
+
+            imageArray.forEach(imageObj => {
+                const imgElement = document.createElement("img");
+                imgElement.src = imageObj.image;
+                gallery.appendChild(imgElement);
+            });
+        }
+
+    
+        document.addEventListener("DOMContentLoaded", loadImages);
+    </script>
+
+</body>
+</html>
